@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Чистый Участок — покос травы, спил деревьев и расчистка участков в Подмосковье</title>
+<meta name="description" content="Профессиональный покос травы, спил деревьев, расчистка участков и вывоз мусора в Москве и Подмосковье. Цены от 500 руб/сотка. Выезд в день обращения. Звоните!">
+<style>
+/* ========== RESET & BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0e0a;color:#e5e7e5;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* ========== COLORS ========== */
+:root{
+  --bg:#0a0e0a;
+  --bg-card:#141a14;
+  --bg-card-hover:#1a241a;
+  --accent:#22c55e;
+  --accent-dark:#16a34a;
+  --accent-dim:#22c55e22;
+  --text:#e5e7e5;
+  --text-dim:#9ca3af;
+  --text-bright:#ffffff;
+  --border:#1f2a1f;
+}
+
+/* ========== HEADER ========== */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,10,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1200px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;color:var(--text-bright)}
+.logo-icon{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#0a0e0a;font-size:20px}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{color:var(--text-dim);font-size:15px;transition:0.2s}
+.nav a:hover{color:var(--accent)}
+.header-phone{display:flex;align-items:center;gap:8px;background:var(--accent);color:#0a0e0a;padding:10px 20px;border-radius:10px;font-weight:600;font-size:15px;white-space:nowrap}
+.header-phone:hover{background:var(--accent-dark)}
+.burger{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer}
+
+/* ========== HERO ========== */
+.hero{padding:120px 0 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:50%;width:800px;height:400px;background:radial-gradient(ellipse,var(--accent-dim),transparent 70%);transform:translateX(-50%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--bg-card);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:14px;color:var(--accent);margin-bottom:20px}
+.hero-badge::before{content:'';width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{font-size:44px;line-height:1.15;font-weight:800;color:var(--text-bright);margin-bottom:20px;letter-spacing:-0.5px}
+.hero h1 span{color:var(--accent)}
+.hero-subtitle{font-size:18px;color:var(--text-dim);margin-bottom:28px;max-width:500px}
+.hero-features{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
+.hero-feature{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--text)}
+.hero-feature::before{content:'✓';color:var(--accent);font-weight:700}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;border:none;transition:0.2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--accent);color:#0a0e0a}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ========== HERO FORM ========== */
+.hero-form{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px}
+.hero-form h3{font-size:22px;font-weight:700;color:var(--text-bright);margin-bottom:6px}
+.hero-form p{color:var(--text-dim);font-size:14px;margin-bottom:20px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:14px;color:var(--text-dim);margin-bottom:6px}
+.form-input,.form-select,.form-textarea{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:15px;transition:0.2s;font-family:inherit}
+.form-input:focus,.form-select:focus,.form-textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn-submit{width:100%;background:var(--accent);color:#0a0e0a;padding:14px;border-radius:10px;font-size:16px;font-weight:700;border:none;cursor:pointer;margin-top:6px}
+.btn-submit:hover{background:var(--accent-dark)}
+.form-note{font-size:12px;color:var(--text-dim);text-align:center;margin-top:12px}
+
+/* ========== SECTIONS ========== */
+.section{padding:60px 0}
+.section-header{text-align:center;margin-bottom:40px}
+.section-tag{display:inline-block;font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:10px}
+.section-title{font-size:32px;font-weight:800;color:var(--text-bright);margin-bottom:10px;letter-spacing:-0.3px}
+.section-subtitle{font-size:17px;color:var(--text-dim);max-width:600px;margin:0 auto}
+
+/* ========== SERVICES GRID ========== */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:0.3s;position:relative;overflow:hidden}
+.service-card:hover{background:var(--bg-card-hover);border-color:var(--accent);transform:translateY(-3px)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transition:0.3s;transform-origin:left}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:48px;height:48px;background:var(--accent-dim);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
+.service-card h3{font-size:20px;font-weight:700;color:var(--text-bright);margin-bottom:8px}
+.service-card p{font-size:15px;color:var(--text-dim);margin-bottom:14px}
+.service-price{font-size:15px;color:var(--accent);font-weight:600}
+.service-link{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:15px;font-weight:600;margin-top:12px}
+.service-link:hover{gap:10px;transition:0.2s}
+
+/* ========== PRICING TABLE ========== */
+.pricing-block{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:32px;overflow:hidden}
+.pricing-table{width:100%;border-collapse:collapse}
+.pricing-table th{text-align:left;padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px;font-weight:600}
+.pricing-table td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:15px;color:var(--text)}
+.pricing-table td:last-child{text-align:right;font-weight:700;color:var(--accent);white-space:nowrap}
+.pricing-table tr:last-child td{border-bottom:none}
+.pricing-table tr:hover td{background:rgba(34,197,94,0.05)}
+
+/* ========== FEATURES/WHY US ========== */
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature-item{text-align:center;padding:24px 16px}
+.feature-item .icon{width:56px;height:56px;background:var(--accent-dim);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px}
+.feature-item h4{font-size:16px;font-weight:700;color:var(--text-bright);margin-bottom:6px}
+.feature-item p{font-size:14px;color:var(--text-dim)}
+
+/* ========== GEO BLOCK ========== */
+.geo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:24px}
+.geo-item{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;font-size:14px;color:var(--text);transition:0.2s;cursor:pointer}
+.geo-item:hover{border-color:var(--accent);background:var(--bg-card-hover);color:var(--accent)}
+
+/* ========== REVIEWS ========== */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:24px}
+.review-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.review-avatar{width:44px;height:44px;background:var(--accent-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--accent);font-weight:700}
+.review-name{font-size:15px;font-weight:600;color:var(--text-bright)}
+.review-date{font-size:13px;color:var(--text-dim)}
+.review-stars{color:var(--accent);font-size:14px;margin-bottom:8px}
+.review-text{font-size:14px;color:var(--text-dim);line-height:1.6}
+
+/* ========== CTA BLOCK ========== */
+.cta-block{background:linear-gradient(135deg,var(--bg-card),var(--bg-card-hover));border:1px solid var(--accent);border-radius:24px;padding:50px;text-align:center;position:relative;overflow:hidden}
+.cta-block::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:200px;background:radial-gradient(ellipse,var(--accent-dim),transparent 70%);transform:translate(-50%,-50%);pointer-events:none}
+.cta-block h2{font-size:30px;font-weight:800;color:var(--text-bright);margin-bottom:12px;position:relative}
+.cta-block p{font-size:17px;color:var(--text-dim);margin-bottom:24px;position:relative}
+.cta-block .btn{position:relative}
+
+/* ========== FOOTER ========== */
+.footer{background:var(--bg);border-top:1px solid var(--border);padding:50px 0 30px;margin-top:60px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.footer-brand h3{font-size:18px;font-weight:700;color:var(--text-bright);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.footer-brand p{font-size:14px;color:var(--text-dim);max-width:300px}
+.footer-col h4{font-size:15px;font-weight:700;color:var(--text-bright);margin-bottom:14px}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{font-size:14px;color:var(--text-dim);transition:0.2s}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;font-size:13px;color:var(--text-dim)}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:968px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero h1{font-size:34px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:1fr}
+  .geo-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+  .burger{display:block}
+}
+@media(max-width:640px){
+  .hero h1{font-size:28px}
+  .services-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-block{padding:30px 20px}
+  .cta-block h2{font-size:24px}
+  .section-title{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">🌿</div>
+      Чистый Участок
+    </a>
+    <nav class="nav">
+      <a href="#uslugi">Услуги</a>
+      <a href="#tseny">Цены</a>
+      <a href="#goroda">Города</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#blog">Блог</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a href="tel:+79000000000" class="header-phone">📞 +7 (900) 000-00-00</a>
+    <button class="burger">☰</button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">Работаем по всему Подмосковью</div>
+        <h1>Покос травы, спил деревьев<br>и расчистка участков<br><span>в Подмосковье</span></h1>
+        <p class="hero-subtitle">Профессиональные бригады с собственной техникой. Покос от 500 руб/сотка, спил деревьев от 500 руб/шт. Выезд в день обращения.</p>
+        <div class="hero-features">
+          <span class="hero-feature">Выезд в день обращения</span>
+          <span class="hero-feature">Собственная техника</span>
+          <span class="hero-feature">Фиксированная цена</span>
+          <span class="hero-feature">Работаем по договору</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#form" class="btn btn-primary">📝 Оставить заявку</a>
+          <a href="tel:+79000000000" class="btn btn-outline">📞 Позвонить</a>
+        </div>
+      </div>
+      <div class="hero-form" id="form">
+        <h3>Бесплатный расчёт стоимости</h3>
+        <p>Заполните форму — перезвоним за 15 минут</p>
+        <form onsubmit="return false">
+          <div class="form-group">
+            <label>Ваше имя</label>
+            <input type="text" class="form-input" placeholder="Как к вам обращаться?">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Телефон</label>
+              <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="form-group">
+              <label>Площадь, соток</label>
+              <input type="number" class="form-input" placeholder="10">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Услуга</label>
+            <select class="form-select">
+              <option>Покос травы</option>
+              <option>Спил деревьев</option>
+              <option>Расчистка участка</option>
+              <option>Удаление пней</option>
+              <option>Вывоз мусора</option>
+              <option>Обрезка/кронирование</option>
+              <option>Комплексные работы</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Получить расчёт →</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="section" id="uslugi">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Наши услуги</span>
+      <h2 class="section-title">Что мы делаем на участке</h2>
+      <p class="section-subtitle">Полный цикл работ по уходу за участком — от покоса травы до полной расчистки под строительство</p>
+    </div>
+    <div class="services-grid">
+      <a href="/uslugi/pokos-travy" class="service-card">
+        <div class="service-icon">🌱</div>
+        <h3>Покос травы</h3>
+        <p>Покос травы и бурьяна триммером или газонокосилкой. От 500 руб/сотка.</p>
+        <div class="service-price">от 500 руб/сотка</div>
+        <span class="service-link">Подробнее →</span>
+      </a>
+      <a href="/uslugi/spil-derevev" class="service-card">
+        <div class="service-icon">🪓</div>
+        <h3>Спил деревьев</h3>
+        <p>Спил и удаление деревьев любой сложности. Арбористы с опытом 10+ лет.</p>
+        <div class="service-price">от 500 руб/шт</div>
+        <span class="service-link">Подробнее →</span>
+      </a>
+      <a href="/uslugi/raschistka-uchastka" class="service-card">
+        <div class="service-icon">🌳</div>
+        <h3>Расчистка участка</h3>
+        <p>Расчистка от деревьев, кустарников, бурьяна. Под строительство или продажу.</p>
+        <div class="service-price">от 3 000 руб/сотка</div>
+        <span class="service-link">Подробнее →</span>
+      </a>
+      <a href="/uslugi/udalenie-pney" class="service-card">
+        <div class="service-icon">🪵</div>
+        <h3>Удаление пней</h3>
+        <p>Фрезерование и дробление пней. Корчёвка вручную или трактором.</p>
+        <div class="service-price">от 300 руб/см диаметра</div>
+        <span class="service-link">Подробнее →</span>
+      </a>
+      <a href="/uslugi/vyvoz-musora" class="service-card">
+        <div class="service-icon">🚛</div>
+        <h3>Вывоз мусора</h3>
+        <p>Вывоз скошенной травы, веток, порубочных остатков. Контейнеры 8-27 м³.</p>
+        <div class="service-price">от 8 000 руб/контейнер</div>
+        <span class="service-link">Подробнее →</span>
+      </a>
+      <a href="/uslugi/obrezka-kronirovanie" class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>Обрезка и кронирование</h3>
+        <p>Санитарная и формирующая обрезка. Кронирование плодовых и декоративных деревьев.</p>
+        <div class="service-price">от 1 500 руб/дерево</div>
+        <span class="service-link">Подробнее →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section class="section" id="tseny" style="background:var(--bg-card)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Цены</span>
+      <h2 class="section-title">Прайс-лист на услуги</h2>
+      <p class="section-subtitle">Фиксированные цены без скрытых платежей. Точную стоимость назовём после осмотра участка.</p>
+    </div>
+    <div class="pricing-block">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Вид работ</th>
+            <th>Ед. изм.</th>
+            <th>Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Покос травы (до 30 см, ровный участок)</td><td>сотка</td><td>от 500 руб</td></tr>
+          <tr><td>Покос травы с уборкой и вывозом</td><td>сотка</td><td>от 700 руб</td></tr>
+          <tr><td>Покос бурьяна / борщевика</td><td>сотка</td><td>от 1 000 руб</td></tr>
+          <tr><td>Стрижка газона газонокосилкой</td><td>сотка</td><td>от 400 руб</td></tr>
+          <tr><td>Спил дерева целиком (до 30 см)</td><td>шт</td><td>от 500 руб</td></tr>
+          <tr><td>Спил дерева по частям</td><td>шт</td><td>от 4 000 руб</td></tr>
+          <tr><td>Спил аварийного дерева</td><td>шт</td><td>от 2 000 руб</td></tr>
+          <tr><td>Расчистка участка от кустарника</td><td>сотка</td><td>от 3 000 руб</td></tr>
+          <tr><td>Расчистка от деревьев (до 30 см)</td><td>сотка</td><td>от 6 000 руб</td></tr>
+          <tr><td>Удаление/дробление пня</td><td>см диаметра</td><td>от 300 руб</td></tr>
+          <tr><td>Вывоз контейнером 8 м³</td><td>шт</td><td>от 16 000 руб</td></tr>
+          <tr><td>Вывоз контейнером 27 м³</td><td>шт</td><td>от 32 000 руб</td></tr>
+          <tr><td>Обрезка / кронирование</td><td>дерево</td><td>от 1 500 руб</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY US / FEATURES ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Почему мы</span>
+      <h2 class="section-title">Почему выбирают «Чистый Участок»</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="icon">⚡</div>
+        <h4>Выезд в день обращения</h4>
+        <p>Бригада выезжает в течение 1-2 часов или в удобный день</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">🔧</div>
+        <h4>Собственная техника</h4>
+        <p>Триммеры, газонокосилки, бензопилы, автовышки</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">💰</div>
+        <h4>Фиксированная цена</h4>
+        <p>Смета не меняется после осмотра. Без скрытых платежей</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">📄</div>
+        <h4>Работаем по договору</h4>
+        <p>Договор, чек, гарантия на работы. Для физлиц и юрлиц</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">📍</div>
+        <h4>Всё Подмосковье</h4>
+        <p>Выезжаем во все районы МО. Без доплат за удалённость</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">👥</div>
+        <h4>Опытные бригады</h4>
+        <p>Арбористы и садовники с опытом 10+ лет</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">🧹</div>
+        <h4>Уборка включена</h4>
+        <p>После работ оставляем участок чистым</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon">🛡️</div>
+        <h4>Гарантия</h4>
+        <p>Отвечаем за качество работ. Исправим если что-то не так</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GEO ========== -->
+<section class="section" id="goroda" style="background:var(--bg-card)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">География</span>
+      <h2 class="section-title">Где мы работаем</h2>
+      <p class="section-subtitle">Обслуживаем все районы Московской области. Выезжаем в СНТ, КП, ИЖС и города.</p>
+    </div>
+    <div class="geo-grid">
+      <div class="geo-item">📍 Истра</div>
+      <div class="geo-item">📍 Одинцово</div>
+      <div class="geo-item">📍 Раменское</div>
+      <div class="geo-item">📍 Балашиха</div>
+      <div class="geo-item">📍 Пушкино</div>
+      <div class="geo-item">📍 Красногорск</div>
+      <div class="geo-item">📍 Дмитров</div>
+      <div class="geo-item">📍 Чехов</div>
+      <div class="geo-item">📍 Подольск</div>
+      <div class="geo-item">📍 Серпухов</div>
+      <div class="geo-item">📍 Волоколамск</div>
+      <div class="geo-item">📍 Наро-Фоминск</div>
+      <div class="geo-item">📍 Лобня</div>
+      <div class="geo-item">📍 Дубна</div>
+      <div class="geo-item">📍 Ступино</div>
+      <div class="geo-item">📍 Коломна</div>
+      <div class="geo-item">📍 Сергиев Посад</div>
+      <div class="geo-item">📍 Ногинск</div>
+      <div class="geo-item">📍 Электросталь</div>
+      <div class="geo-item">📍 Клин</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="section" id="otzyvy">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Отзывы</span>
+      <h2 class="section-title">Что говорят клиенты</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">СМ</div>
+          <div>
+            <div class="review-name">Сергей М.</div>
+            <div class="review-date">Истринский район, СНТ «Лесное»</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Заказывал покос травы на 15 сотках. Ребята приехали на следующий день, за 2 часа всё скосили и убрали. Участок был заросший по пояс. Цена как договаривались — не изменилась.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">ЕН</div>
+          <div>
+            <div class="review-name">Елена Н.</div>
+            <div class="review-date">Одинцовский район, КП «Николина Гора»</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Спилили 3 старые берёзы, которые нависали над домом. Работали аккуратно, ничего не повредили. Вывезли весь мусор. Очень довольна, рекомендую!</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">ДВ</div>
+          <div>
+            <div class="review-name">Дмитрий В.</div>
+            <div class="review-date">Раменский район, СНТ «Родник»</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Расчистка участка под строительство — 20 соток леса и бурьяна. Бригада из 4 человек за 3 дня всё вычистила. Остались пни — тоже удалили дробилкой. Отдельное спасибо за честную смету.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-block">
+      <h2>Готовы привести участок в порядок?</h2>
+      <p>Оставьте заявку — бесплатно рассчитаем стоимость и выедем в удобный день</p>
+      <a href="#form" class="btn btn-primary" style="font-size:18px;padding:16px 32px">📝 Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" id="kontakty">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>🌿 Чистый Участок</h3>
+        <p>Покос травы, спил деревьев, расчистка и вывоз мусора в Москве и Подмосковье. Работаем с 2018 года. Собственная техника, опытные бригады, фиксированные цены.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="/uslugi/pokos-travy">Покос травы</a></li>
+          <li><a href="/uslugi/spil-derevev">Спил деревьев</a></li>
+          <li><a href="/uslugi/raschistka-uchastka">Расчистка участка</a></li>
+          <li><a href="/uslugi/udalenie-pney">Удаление пней</a></li>
+          <li><a href="/uslugi/vyvoz-musora">Вывоз мусора</a></li>
+          <li><a href="/uslugi/obrezka-kronirovanie">Обрезка</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Города</h4>
+        <ul>
+          <li><a href="/goroda/istra">Истра</a></li>
+          <li><a href="/goroda/odintsovo">Одинцово</a></li>
+          <li><a href="/goroda/ramenskoe">Раменское</a></li>
+          <li><a href="/goroda/balashiha">Балашиха</a></li>
+          <li><a href="/goroda/pushkino">Пушкино</a></li>
+          <li><a href="/goroda">Все города →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+79000000000">📞 +7 (900) 000-00-00</a></li>
+          <li><a href="mailto:info@chistyy-uchastok.ru">✉️ info@chistyy-uchastok.ru</a></li>
+          <li>🕐 Ежедневно, 8:00–21:00</li>
+          <li><a href="/blog">Блог</a></li>
+          <li><a href="/o-nas">О компании</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Чистый Участок. chistyy-uchastok.ru</span>
+      <span>Политика конфиденциальности</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

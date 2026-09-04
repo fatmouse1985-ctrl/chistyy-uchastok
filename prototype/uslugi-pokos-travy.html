@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Покос травы в Подмосковье — цена от 500 руб/сотка | Чистый Участок</title>
+<meta name="description" content="Профессиональный покос травы и бурьяна на участке в Москве и Подмосковье. Триммером и газонокосилкой. Цены от 500 руб/сотка. Выезд в день обращения.">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0e0a;color:#e5e7e5;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+:root{--bg:#0a0e0a;--bg-card:#141a14;--bg-card-hover:#1a241a;--accent:#22c55e;--accent-dark:#16a34a;--accent-dim:#22c55e22;--text:#e5e7e5;--text-dim:#9ca3af;--text-bright:#ffffff;--border:#1f2a1f}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:100;background:rgba(10,14,10,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1200px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;color:var(--text-bright)}
+.logo-icon{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{color:var(--text-dim);font-size:15px;transition:0.2s}.nav a:hover{color:var(--accent)}
+.header-phone{display:flex;align-items:center;gap:8px;background:var(--accent);color:#0a0e0a;padding:10px 20px;border-radius:10px;font-weight:600;font-size:15px;white-space:nowrap}
+
+/* BREADCRUMBS */
+.breadcrumbs{padding:20px 0 0;font-size:14px;color:var(--text-dim)}
+.breadcrumbs a{color:var(--text-dim)}.breadcrumbs a:hover{color:var(--accent)}
+.breadcrumbs span{margin:0 6px;color:var(--border)}
+
+/* SERVICE HERO */
+.service-hero{padding:30px 0 50px}
+.service-hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
+.service-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-dim);border:1px solid var(--accent);padding:6px 14px;border-radius:100px;font-size:14px;color:var(--accent);margin-bottom:16px}
+.service-hero h1{font-size:38px;line-height:1.2;font-weight:800;color:var(--text-bright);margin-bottom:16px;letter-spacing:-0.5px}
+.service-hero-desc{font-size:17px;color:var(--text-dim);margin-bottom:24px}
+.service-quick{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.quick-tag{background:var(--bg-card);border:1px solid var(--border);padding:8px 16px;border-radius:10px;font-size:14px;color:var(--text)}
+.quick-tag strong{color:var(--accent)}
+.service-cta{display:flex;gap:12px}
+.btn{padding:14px 28px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;border:none;transition:0.2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--accent);color:#0a0e0a}.btn-primary:hover{background:var(--accent-dark)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* FORM CARD */
+.form-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px;position:sticky;top:90px}
+.form-card h3{font-size:20px;font-weight:700;color:var(--text-bright);margin-bottom:6px}
+.form-card p{color:var(--text-dim);font-size:14px;margin-bottom:20px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:14px;color:var(--text-dim);margin-bottom:6px}
+.form-input,.form-select,.form-textarea{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:15px;font-family:inherit}
+.form-input:focus,.form-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.btn-submit{width:100%;background:var(--accent);color:#0a0e0a;padding:14px;border-radius:10px;font-size:16px;font-weight:700;border:none;cursor:pointer}
+.form-note{font-size:12px;color:var(--text-dim);text-align:center;margin-top:12px}
+
+/* SECTIONS */
+.section{padding:50px 0}
+.section-title{font-size:28px;font-weight:800;color:var(--text-bright);margin-bottom:20px;letter-spacing:-0.3px}
+
+/* PRICE TABLE */
+.price-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.price-table{width:100%;border-collapse:collapse}
+.price-table th{text-align:left;padding:14px 20px;border-bottom:1px solid var(--border);font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px;font-weight:600}
+.price-table td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:15px}
+.price-table td:last-child{text-align:right;font-weight:700;color:var(--accent);white-space:nowrap}
+.price-table tr:last-child td{border-bottom:none}
+.price-table tr:hover td{background:rgba(34,197,94,0.05)}
+
+/* TYPES GRID */
+.types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.type-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;transition:0.3s}
+.type-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.type-icon{font-size:32px;margin-bottom:12px}
+.type-card h4{font-size:17px;font-weight:700;color:var(--text-bright);margin-bottom:8px}
+.type-card p{font-size:14px;color:var(--text-dim)}
+
+/* BEFORE/AFTER */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ba-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.ba-img{height:200px;background:linear-gradient(135deg,var(--bg-card),var(--bg-card-hover));display:flex;align-items:center;justify-content:center;font-size:48px;color:var(--text-dim)}
+.ba-label{padding:12px 16px;font-size:14px;color:var(--text-dim);text-align:center}
+.ba-label strong{color:var(--text-bright)}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;cursor:pointer;transition:0.2s}
+.faq-item:hover{border-color:var(--accent)}
+.faq-item h4{font-size:16px;font-weight:700;color:var(--text-bright);margin-bottom:8px}
+.faq-item p{font-size:15px;color:var(--text-dim)}
+
+/* LOCALS */
+.locals-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.local-link{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;font-size:14px;transition:0.2s}
+.local-link:hover{border-color:var(--accent);color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:968px){
+  .service-hero-grid{grid-template-columns:1fr}
+  .form-card{position:static}
+  .types-grid{grid-template-columns:1fr 1fr}
+  .locals-grid{grid-template-columns:repeat(3,1fr)}
+  .nav{display:none}
+}
+@media(max-width:640px){
+  .types-grid{grid-template-columns:1fr}
+  .ba-grid{grid-template-columns:1fr}
+  .locals-grid{grid-template-columns:1fr 1fr}
+  .service-hero h1{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo"><div class="logo-icon">🌿</div> Чистый Участок</a>
+    <nav class="nav">
+      <a href="/">Главная</a>
+      <a href="/#uslugi">Услуги</a>
+      <a href="/#tseny">Цены</a>
+      <a href="/#goroda">Города</a>
+      <a href="/blog">Блог</a>
+    </nav>
+    <a href="tel:+79000000000" class="header-phone">📞 +7 (900) 000-00-00</a>
+  </div>
+</header>
+
+<!-- BREADCRUMBS -->
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="/">Главная</a><span>/</span><a href="/#uslugi">Услуги</a><span>/</span>Покос травы
+  </div>
+</div>
+
+<!-- SERVICE HERO -->
+<section class="service-hero">
+  <div class="container">
+    <div class="service-hero-grid">
+      <div>
+        <div class="service-badge">🌱 Услуга</div>
+        <h1>Покос травы в Подмосковье</h1>
+        <p class="service-hero-desc">Профессиональный покос травы, бурьяна и газона на участках любого размера. Работаем триммерами и газонокосилками. Выезжаем по всему Подмосковью в день обращения.</p>
+        <div class="service-quick">
+          <span class="quick-tag">от <strong>500 руб/сотка</strong></span>
+          <span class="quick-tag">выезд <strong>в день обращения</strong></span>
+          <span class="quick-tag">минимум <strong>5 соток</strong></span>
+        </div>
+        <div class="service-cta">
+          <a href="#form" class="btn btn-primary">📝 Рассчитать стоимость</a>
+          <a href="tel:+79000000000" class="btn btn-outline">📞 Позвонить</a>
+        </div>
+      </div>
+      <div class="form-card" id="form">
+        <h3>Расчёт стоимости покоса</h3>
+        <p>Перезвоним за 15 минут и назовём точную цену</p>
+        <form onsubmit="return false">
+          <div class="form-group">
+            <label>Ваше имя</label>
+            <input type="text" class="form-input" placeholder="Как к вам обращаться?">
+          </div>
+          <div class="form-group">
+            <label>Телефон</label>
+            <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-group">
+            <label>Площадь участка, соток</label>
+            <input type="number" class="form-input" placeholder="10">
+          </div>
+          <div class="form-group">
+            <label>Состояние участка</label>
+            <select class="form-select">
+              <option>Трава до 30 см</option>
+              <option>Трава 30-50 см</option>
+              <option>Высокий бурьян / борщевик</option>
+              <option>Газонная трава</option>
+              <option>Заброшенный участок</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Получить расчёт →</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Цены на покос травы</h2>
+    <div class="price-card">
+      <table class="price-table">
+        <thead>
+          <tr><th>Вид работ</th><th>Ед. изм.</th><th>Цена</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Покос травы (до 30 см, ровный участок, без вывоза)</td><td>сотка</td><td>от 500 руб</td></tr>
+          <tr><td>Покос травы с уборкой и вывозом</td><td>сотка</td><td>от 700 руб</td></tr>
+          <tr><td>Покос травы высотой 30-50 см</td><td>сотка</td><td>от 700 руб</td></tr>
+          <tr><td>Покос травы высотой 50-100 см</td><td>сотка</td><td>от 1 000 руб</td></tr>
+          <tr><td>Покос бурьяна / борщевика</td><td>сотка</td><td>от 1 000 руб</td></tr>
+          <tr><td>Стрижка газона газонокосилкой</td><td>сотка</td><td>от 400 руб</td></tr>
+          <tr><td>Покос трактором (от 1 га)</td><td>сотка</td><td>от 300 руб</td></tr>
+          <tr><td>Сбор скошенной травы граблями</td><td>сотка</td><td>от 200 руб</td></tr>
+          <tr><td>Вывоз скошенной травы (контейнер 8 м³)</td><td>шт</td><td>от 16 000 руб</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section class="section" style="background:var(--bg-card)">
+  <div class="container">
+    <h2 class="section-title">Виды покоса травы</h2>
+    <div class="types-grid">
+      <div class="type-card">
+        <div class="type-icon">🌱</div>
+        <h4>Покос триммером</h4>
+        <p>Для неровных участков, вдоль заборов, канав и в труднодоступных местах. Бензиновые триммеры с леской и ножом.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🛒</div>
+        <h4>Стрижка газонокосилкой</h4>
+        <p>Для ровных газонов. Колёсная газонокосилка с травосборником. Идеальный срез 4-6 см, без необходимости уборки.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🌾</div>
+        <h4>Покос бурьяна</h4>
+        <p>Для запущенных участков с высокими сорняками. Мощные триммеры с ножевыми насадками. Сбор и вывоз.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🌻</div>
+        <h4>Борьба с борщевиком</h4>
+        <p>Специальный покос борщевика Сосновского. Работаем в защитной одежде. 3-4 покоса за сезон для истощения корня.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🚜</div>
+        <h4>Покос трактором</h4>
+        <p>Для площадей от 1 га. Роторная косилка за мини-трактором. Быстро и экономно для больших территорий.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">📅</div>
+        <h4>Регулярный покос</h4>
+        <p>Абонемент на сезон — 5-10 покосов с скидкой 15%. Поддержание участка в порядке весь сезон.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Примеры работ: до и после</h2>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <div class="ba-img">📸</div>
+        <div class="ba-label"><strong>До:</strong> Участок 15 соток, трава по пояс</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-img">🌿</div>
+        <div class="ba-label"><strong>После:</strong> Скосили, убрали, вывезли</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-img">📸</div>
+        <div class="ba-label"><strong>До:</strong> Заброшенный участок, бурьян 1.5 м</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-img">🌿</div>
+        <div class="ba-label"><strong>После:</strong> Расчистка за 1 день, 20 соток</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--bg-card)">
+  <div class="container">
+    <h2 class="section-title">Частые вопросы о покосе травы</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Сколько стоит покос травы на участке?</h4>
+        <p>Цена начинается от 500 рублей за сотку для ровного участка с травой до 30 см. Стоимость зависит от высоты травы, рельефа, объёма и необходимости вывоза. Точную цену назовём после осмотра.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Как быстро вы выезжаете?</h4>
+        <p>Обычно выезд в день обращения или на следующий день. В сезон (май-август) возможна загруженность — рекомендуем записываться заранее.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Нужно ли убирать скошенную траву?</h4>
+        <p>Скошенную траву можно собрать и вывезти (отдельная услуга) или оставить на участке для мульчирования. Газонокосилка с травосборником собирает автоматически — уборка не нужна.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Можете ли вы косить борщевик?</h4>
+        <p>Да, работаем с борщевиком Сосновского. Используем защитную одежду и очки. Для полного уничтожения нужно 3-4 покоса за сезон с интервалом 3-4 недели в фазу цветения.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Как часто нужно косить траву на участке?</h4>
+        <p>В пик вегетации (май-июнь) — раз в 10-14 дней. В июле-августе — раз в 3 недели. Газонную траву — раз в неделю. Составим индивидуальный график под ваш участок.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Работаете ли вы по договору?</h4>
+        <p>Да, работаем по договору с физическими и юридическими лицами. Предоставляем чек, акт выполненных работ. Гарантия на работы.</p>
+      </div>
+      <div class="faq-item">
+        <h4>В каких районах Подмосковья вы работаете?</h4>
+        <p>Выезжаем во все районы Московской области. Без доплат за удалённость от МКАД. Работаем в СНТ, КП, ИЖС, на территориях юридических лиц.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALS -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Покос травы в вашем городе</h2>
+    <div class="locals-grid">
+      <a href="/goroda/istra/pokos-travy" class="local-link">📍 Истра</a>
+      <a href="/goroda/odintsovo/pokos-travy" class="local-link">📍 Одинцово</a>
+      <a href="/goroda/ramenskoe/pokos-travy" class="local-link">📍 Раменское</a>
+      <a href="/goroda/balashiha/pokos-travy" class="local-link">📍 Балашиха</a>
+      <a href="/goroda/pushkino/pokos-travy" class="local-link">📍 Пушкино</a>
+      <a href="/goroda/krasnogorsk/pokos-travy" class="local-link">📍 Красногорск</a>
+      <a href="/goroda/dmitrov/pokos-travy" class="local-link">📍 Дмитров</a>
+      <a href="/goroda/chekhov/pokos-travy" class="local-link">📍 Чехов</a>
+      <a href="/goroda/podolsk/pokos-travy" class="local-link">📍 Подольск</a>
+      <a href="/goroda/serpukhov/pokos-travy" class="local-link">📍 Серпухов</a>
+      <a href="/goroda/naro-fominsk/pokos-travy" class="local-link">📍 Наро-Фоминск</a>
+      <a href="/goroda/klin/pokos-travy" class="local-link">📍 Клин</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

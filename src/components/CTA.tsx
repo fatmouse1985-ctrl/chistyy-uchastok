@@ -1,0 +1,4 @@
+import { Phone } from "lucide-react";
+import Container from "./Container";
+
+export default function CTA() { return <section className="section"><Container><div className="relative overflow-hidden rounded-3xl border border-accent bg-gradient-to-br from-card to-card-hover p-[50px] text-center before:pointer-events-none before:absolute before:left-1/2 before:top-1/2 before:h-[200px] before:w-[600px] before:-translate-x-1/2 before:-translate-y-1/2 before:bg-[radial-gradient(ellipse,var(--accent-dim),transparent_70%)] max-sm:px-5 max-sm:py-8"><h2 className="relative text-3xl font-extrabold text-bright max-sm:text-2xl">Готовы привести участок в порядок?</h2><p className="relative mb-6 mt-3 text-[17px] text-dim">Оставьте заявку — бесплатно оценим объём работ и назовём точную стоимость.</p><a href="tel:+79000000000" className="btn-primary relative"><Phone size={19} />Позвонить сейчас</a></div></Container></section>; }
